@@ -1,0 +1,4 @@
+# messages-es.i18n
+
+validation.manager.identifierNumber = El número de identificación debe seguir el patrón ^[A-Z]{2-3}\d{6}$
+validation.leg.flightNumber = El número de un vuelo debe seguir el patrón ^[A-Z]{2}\\d{4}$
