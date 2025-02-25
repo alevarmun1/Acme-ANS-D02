@@ -2,3 +2,5 @@
 
 validation.manager.identifierNumber = The identifier number must follow the pattern ^[A-Z]{2-3}\d{6}$
 validation.leg.flightNumber = The number of a flight must follow the pattern ^[A-Z]{2}\\d{4}$
+validation.airport.code = The code of an airport must follow the pattern ^[A-Z]{3}$
+validation.airport.contactPhoneNumber = The contact phone number must follow the pattern ^\\+?\\d{6,15}$
