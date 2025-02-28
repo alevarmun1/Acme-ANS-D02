@@ -60,5 +60,4 @@ public class Agent extends AbstractRole {
 	@Valid
 	@ManyToOne
 	private Airline				airline;
-
 }
