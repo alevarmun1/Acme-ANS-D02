@@ -15,7 +15,6 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
-import acme.entities.airlines.Airline;
 import acme.realms.Agent;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,7 +44,7 @@ public class Claim extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Automapped
-	private Airline				airline;
+	private ClaimType			type;
 
 	@Mandatory
 	@Automapped
