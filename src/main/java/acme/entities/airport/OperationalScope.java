@@ -1,5 +1,5 @@
 
-package acme.entities.group;
+package acme.entities.airport;
 
 public enum OperationalScope {
 
