@@ -1,17 +1,17 @@
 
-package acme.entities.group;
+package acme.entities.airports;
 
 import javax.persistence.Column;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.mappings.Automapped;
+import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidEmail;
+import acme.client.components.validation.ValidString;
+import acme.client.components.validation.ValidUrl;
 
 public class Airport extends AbstractEntity {
 
@@ -19,34 +19,43 @@ public class Airport extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
-	@NotBlank
-	@Size(max = 50)
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
 	private String				name;
 
+	@Mandatory
 	@Column(unique = true)
-	@NotBlank
 	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airport.code}")
 	private String				code;
 
-	@NotNull
+	@Mandatory
+	@Valid
+	@Automapped
 	private OperationalScope	operationalScope;
 
-	@NotBlank
-	@Size(max = 50)
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
 	private String				city;
 
-	@NotBlank
-	@Size(max = 50)
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
 	private String				country;
 
-	@URL
-	@Length(max = 255)
+	@Optional
+	@ValidUrl
+	@Automapped
 	private String				website;
 
-	@Email
-	@Length(max = 100)
+	@Optional
+	@ValidEmail
+	@Automapped
 	private String				email;
 
+	@Optional
+	@Automapped
 	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
 	private String				contactPhoneNumber;
 
