@@ -1,3 +1,3 @@
-key,code,languages,airline,moment,bio,photo,key:user-account
+key,code,languages,moment,bio,photo,key:airline,key:user-account
 agent-01,PB163795,"spanish,english,french","Ryanair",2021/06/19 08:30,,"https://as1.ftcdn.net/jpg/05/23/96/36/1000_F_523963628_cYv1dUNBPG7GkotMRtIWkvE4Aq5KKrnR.jpg",user-account-agent-01
 agent-02,AYA277990,"spanish","Vueling",2012/06/18 00:00,"Born in Seville, Spain, in 1987 and studied in University of Seville",,user-account-agent-02

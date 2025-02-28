@@ -5,8 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractRole;
@@ -16,6 +18,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.entities.airlines.Airline;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -37,11 +40,6 @@ public class Agent extends AbstractRole {
 	private String				languages;
 
 	@Mandatory
-	@ValidString
-	@Automapped
-	private String				airline;
-
-	@Mandatory
 	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
 	private Date				moment;
@@ -55,5 +53,12 @@ public class Agent extends AbstractRole {
 	@ValidUrl
 	@Automapped
 	private String				photo;
+
+	// Relationships ----------------------------------------------------------
+
+	@Mandatory
+	@Valid
+	@ManyToOne
+	private Airline				airline;
 
 }
