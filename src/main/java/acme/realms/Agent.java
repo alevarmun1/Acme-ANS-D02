@@ -12,10 +12,13 @@ import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractRole;
+import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoney;
+import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidLongText;
 import acme.entities.airlines.Airline;
@@ -45,9 +48,14 @@ public class Agent extends AbstractRole {
 	private Date				moment;
 
 	@Optional
-	@ValidLongText
+	@ValidString
 	@Automapped
 	private String				bio;
+
+	@Optional
+	@ValidMoney
+	@Automapped
+	private Money				salary;
 
 	@Optional
 	@ValidUrl
