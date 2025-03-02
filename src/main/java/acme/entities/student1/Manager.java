@@ -4,6 +4,7 @@ package acme.entities.student1;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Min;
@@ -17,7 +18,12 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.components.basis.AbstractEntity;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class Manager extends AbstractEntity {
 
 	// Serialisation identifier
