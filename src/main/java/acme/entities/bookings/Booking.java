@@ -11,6 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -35,19 +36,23 @@ public class Booking extends AbstractEntity {
 	private String				locatorCode;
 
 	@Mandatory
+	@Automapped
 	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
 	private Date				purchaseMoment;
 
 	@Mandatory
+	@Automapped
 	@Valid
 	private TravelClass			travelClass;
 
 	@Mandatory
+	@Automapped
 	@ValidNumber(min = 0)
 	private Double				price;
 
 	@Optional
+	@Automapped
 	@ValidNumber(min = 4, max = 4)
 	private Integer				lastCreditCardDigits;
 
