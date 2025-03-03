@@ -1,5 +1,5 @@
 
-package acme.entities.student1;
+package acme.entities.flights;
 
 public enum Status {
 
