@@ -1,54 +1,74 @@
 
-package acme.entities.student1;
+package acme.entities.flights;
 
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.mappings.Automapped;
+import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidString;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class Leg extends AbstractEntity {
 
 	// Serialisation identifier
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
-	@Column(unique = true)
-	@NotBlank
+	@Mandatory
 	@Pattern(regexp = "^[A-Z]{2}\\d{4}$", message = "{validation.leg.flightNumber}")
+	@Column(unique = true)
 	private String				flightNumber;
 
-	@NotNull
+	@Mandatory
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				scheduledDeparture;
 
-	@NotNull
+	@Mandatory
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				scheduledArrival;
 
-	@NotNull
+	@Mandatory
+	@Valid
+	@Automapped
 	private Status				status;
 
-	@NotBlank
+	@Mandatory
+	@ValidString
+	@Automapped
 	private String				departureAirport;
 
-	@NotBlank
+	@Mandatory
+	@ValidString
+	@Automapped
 	private String				arrivalAirport;
 
-	@NotBlank
+	@Mandatory
+	@ValidString
+	@Automapped
 	private String				aircraft;
 
 
 	// Derived attributes
+	@Transient
 	public double duration() {
 		if (this.scheduledDeparture != null && this.scheduledArrival != null) {
 			long durationInSeconds = Duration.between(Instant.ofEpochMilli(this.scheduledDeparture.getTime()), Instant.ofEpochMilli(this.scheduledArrival.getTime())).toSeconds();
@@ -59,7 +79,7 @@ public class Leg extends AbstractEntity {
 
 
 	// Relationships
-	@NotNull
+	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Flight flight;
