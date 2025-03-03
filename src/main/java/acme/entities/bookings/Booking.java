@@ -1,5 +1,5 @@
 
-package acme.realms;
+package acme.entities.bookings;
 
 import java.util.Date;
 
@@ -9,63 +9,63 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
-import acme.client.components.basis.AbstractRole;
-import acme.client.components.datatypes.Money;
+import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidMoney;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.client.components.validation.ValidUrl;
-import acme.constraints.ValidLongText;
-import acme.entities.airlines.Airline;
+import acme.entities.passengers.Passenger;
+import acme.entities.student1.Flight;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Agent extends AbstractRole {
+public class Booking extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
+	// Attributes
 	@Mandatory
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{2,3}[0-9]{6}$")
-	private String				code;
+	@ValidString(pattern = "^[A-Z0-9]{6,8}$")
+	private String				locatorCode;
 
 	@Mandatory
-	@ValidLongText
 	@Automapped
-	private String				languages;
-
-	@Mandatory
 	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
-	private Date				moment;
+	private Date				purchaseMoment;
+
+	@Mandatory
+	@Automapped
+	@Valid
+	private TravelClass			travelClass;
+
+	@Mandatory
+	@Automapped
+	@ValidNumber(min = 0)
+	private Double				price;
 
 	@Optional
-	@ValidString
 	@Automapped
-	private String				bio;
+	@ValidNumber(min = 4, max = 4)
+	private Integer				lastCreditCardDigits;
 
-	@Optional
-	@ValidMoney
-	@Automapped
-	private Money				salary;
-
-	@Optional
-	@ValidUrl
-	@Automapped
-	private String				photo;
-
-	// Relationships ----------------------------------------------------------
+	// Relationships
 
 	@Mandatory
 	@Valid
 	@ManyToOne
-	private Airline				airline;
+	private Passenger			passenger;
+
+	@Mandatory
+	@Valid
+	@ManyToOne
+	private Flight				flight;
+
 }

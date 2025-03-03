@@ -14,7 +14,8 @@ import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
-import acme.client.components.validation.ValidString;
+import acme.constraints.ValidLongText;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,7 +32,7 @@ public class TrackingLog extends AbstractEntity {
 	private Date				moment;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				step;
 
@@ -45,7 +46,7 @@ public class TrackingLog extends AbstractEntity {
 	private boolean				accepted;
 
 	@Mandatory
-	@ValidString
+	@ValidLongText
 	@Automapped
 	private String				resolution;
 
