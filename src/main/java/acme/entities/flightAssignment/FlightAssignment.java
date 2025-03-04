@@ -1,29 +1,29 @@
 
-package acme.entities.review;
+package acme.entities.flightAssignment;
 
 import java.util.Date;
 
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 
-public class Review extends AbstractEntity {
+public class FlightAssignment extends AbstractEntity {
 
 	// Serialisation identifier
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
+	@Valid
 	@Automapped
-	private String				name;
+	private Duties				duty;
 
 	@Mandatory
 	@ValidMoment(past = true)
@@ -31,24 +31,14 @@ public class Review extends AbstractEntity {
 	private Date				moment;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@Valid
 	@Automapped
-	private String				subject;
+	private AssignmentStatus	currentStatus;
 
-	@Mandatory
+	@Optional
 	@ValidString(max = 255)
 	@Automapped
-	private String				text;
-
-	@Optional
-	@ValidNumber(max = 10, min = 0)
-	@Automapped
-	private Double				score;
-
-	@Optional
-	//@Valid
-	@Automapped
-	private Boolean				recommended;
+	private String				remarks;
 
 	// Derived attributes
 
