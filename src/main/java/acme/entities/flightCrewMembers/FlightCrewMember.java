@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
@@ -47,7 +48,7 @@ public class FlightCrewMember extends AbstractEntity {
 	@Mandatory
 	@ValidMoney
 	@Automapped
-	private Airline				salary;
+	private Money				salary;
 
 	@Optional
 	@ValidNumber(min = 0)
