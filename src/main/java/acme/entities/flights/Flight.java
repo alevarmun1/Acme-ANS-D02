@@ -105,6 +105,6 @@ public class Flight extends AbstractEntity {
 	// Relationships
 	@Mandatory
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne//(optional = false)
 	private Manager				manager;
 }
