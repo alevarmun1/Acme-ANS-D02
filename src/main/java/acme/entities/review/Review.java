@@ -1,5 +1,5 @@
 
-package acme.entities.group;
+package acme.entities.review;
 
 import java.util.Date;
 
