@@ -1,10 +1,11 @@
 
-package acme.entities.airlines;
+package acme.entities.bookings;
 
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -13,58 +14,58 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
-import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.client.components.validation.ValidUrl;
+import acme.entities.flights.Flight;
+import acme.entities.passengers.Passenger;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Airline extends AbstractEntity {
+public class Booking extends AbstractEntity {
 
-	// Serialisation identifier
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
-	@Automapped
-	private String				name;
-
-	@Mandatory
-	@ValidString(pattern = "^[A-Z]{3}$")
 	@Column(unique = true)
-	private String				code;
+	@ValidString(pattern = "^[A-Z0-9]{6,8}$")
+	private String				locatorCode;
 
 	@Mandatory
-	@ValidUrl
 	@Automapped
-	private String				website;
+	@Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(past = true)
+	private Date				purchaseMoment;
+
+	@Mandatory
+	@Automapped
+	@Valid
+	private TravelClass			travelClass;
+
+	@Mandatory
+	@Automapped
+	@ValidNumber(min = 0)
+	private Double				price;
+
+	@Optional
+	@Automapped
+	@ValidNumber(min = 4, max = 4)
+	private Integer				lastCreditCardDigits;
+
+	// Relationships
 
 	@Mandatory
 	@Valid
-	@Automapped
-	private AirlineType			type;
+	@ManyToOne
+	private Passenger			passenger;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
-	@ValidMoment(past = true)
-	private Date				foundationMoment;
+	@Valid
+	@ManyToOne
+	private Flight				flight;
 
-	@Optional
-	@ValidEmail
-	@Automapped
-	private String				email;
-
-	@Optional
-	@ValidString(pattern = "^\\+?\\d{6,15}$")
-	@Automapped
-	private String				phoneNumber;
-
-	// Derived attributes
-
-	// Relationships
 }
