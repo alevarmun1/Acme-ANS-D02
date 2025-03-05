@@ -1,5 +1,5 @@
 
-package acme.entities.review;
+package acme.entities.activityLog;
 
 import java.util.Date;
 
@@ -10,7 +10,6 @@ import javax.persistence.TemporalType;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
@@ -20,41 +19,31 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Review extends AbstractEntity {
+public class ActivityLog extends AbstractEntity {
 
 	// Serialisation identifier
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
-	@Automapped
-	private String				name;
-
-	@Mandatory
 	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				moment;
+	private Date				registrationMoment;
 
 	@Mandatory
 	@ValidString(max = 50)
 	@Automapped
-	private String				subject;
+	private String				typeOfIncident;
 
 	@Mandatory
 	@ValidString(max = 255)
 	@Automapped
-	private String				text;
+	private String				description;
 
-	@Optional
-	@ValidNumber(max = 10, min = 0)
+	@Mandatory
+	@ValidNumber(min = 0, max = 10)
 	@Automapped
-	private Double				score;
-
-	@Optional
-	//@Valid
-	@Automapped
-	private Boolean				recommended;
+	private Integer				severityLevel;
 
 	// Derived attributes
 
