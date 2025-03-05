@@ -16,7 +16,7 @@ airline-10,<script>alert(‘Hacked!’);</script>,SSX,http://lorem.com/ipsum,STA
 airline-11,' or 'A' = 'A,RUX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
  
 # website - stadard variations
-airline-12,"Lorem ipsum dolor sit ame",ZZX,ftp://a,2012/07/02 00:00,STANDARD,acme@lorem-ipsum.org,+3456754
+airline-12,"Lorem ipsum dolor sit ame",ZLX,ftp://a,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 airline-13,"Lorem ipsum dolor sit ame",YBX,ftp://a.b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 airline-14,"Lorem ipsum dolor sit ame",BYX,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 airline-15,"Lorem ipsum dolor sit ame",WCX,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
@@ -30,8 +30,8 @@ airline-22,"Lorem ipsum dolor sit ame",KUX,http://example.org?a,STANDARD,2012/07
 airline-23,"Lorem ipsum dolor sit ame",HUX,http://example.org?a&b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 airline-25,"Lorem ipsum dolor sit ame",ALX,http://example.org/,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 airline-26,"Lorem ipsum dolor sit ame",JGX,http://example.org/a,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
-airline-27,"Lorem ipsum dolor sit ame",QRX,http://example.org/a/b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754 
-airline-28,"Lorem ipsum dolor sit ame",XTX,http://example.org/a/b?a&b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754 
+airline-27,"Lorem ipsum dolor sit ame",QRX,http://example.org/a/b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
+airline-28,"Lorem ipsum dolor sit ame",XTX,http://example.org/a/b?a&b,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
 
 # type - standard variations
 airline-29,"Lorem ipsum dolor sit ame",BEX,http://example.org/,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,+3456754
@@ -49,16 +49,16 @@ airline-35,"Lorem ipsum dolor sit ame",DTX,http://example.org/,STANDARD,2022/07/
 airline-36,"Lorem ipsum dolor sit ame",ORX,http://example.org/,STANDARD,2022/07/30 00:00,a@b.es,+3456754
 airline-37,"Lorem ipsum dolor sit ame",TIX,http://example.org/,STANDARD,2022/07/30 00:00,a@b.esx,+3456754
 airline-38,"Lorem ipsum dolor sit ame",SYX,http://example.org/,STANDARD,2022/07/30 00:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,+3456754
-airline-39,"Lorem ipsum dolor sit ame",AUX,http://example.org/,STANDARD,2022/07/30 00:00,ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",+3456754
-airline-40,"Lorem ipsum dolor sit ame",PCX,http://example.org/,STANDARD,2022/07/30 00:00,acme:password@lorem-ipsum.org,+3456754
-airline-41,"Lorem ipsum dolor sit ame",VFX,http://example.org/,STANDARD,2022/07/30 00:00,,+3456754
+airline-39,"Lorem ipsum dolor sit ame",AUX,http://example.org/,STANDARD,2022/07/30 00:00,ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,+3456754
+# airline-40,"Lorem ipsum dolor sit ame",PCX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme:password@lorem-ipsum.org,+3456754
+airline-41,"Lorem ipsum dolor sit ame",VFX,http://lorem.com/ipsum,STANDARD,2022/07/30 00:00,null,+3456754
 
 # phoneNumber - standard variations
 airline-42,"Lorem ipsum dolor sit ame",TTX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,
 airline-43,"Lorem ipsum dolor sit ame",SXX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+000000
 airline-44,"Lorem ipsum dolor sit ame",MEX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+999999999999999
 airline-45,"Lorem ipsum dolor sit ame",KLX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+23779135627
-airline-46,"Lorem ipsum dolor sit ame",AAX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,108200
+airline-46,"Lorem ipsum dolor sit ame",WDX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,108200
 airline-47,"Lorem ipsum dolor sit ame",HPX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,55302976019
 airline-48,"Lorem ipsum dolor sit ame",RWX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,1876451
 airline-49,"Lorem ipsum dolor sit ame",WRX,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,+131248903141090
