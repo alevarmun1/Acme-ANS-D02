@@ -18,7 +18,6 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidLongText;
 import acme.entities.airlines.Airline;
@@ -34,7 +33,7 @@ public class Agent extends AbstractRole {
 
 	@Mandatory
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{2,3}[0-9]{6}$")
+	@Pattern(regexp = "^[A-Z]{2,3}\\d{6}$")
 	private String				code;
 
 	@Mandatory
@@ -48,7 +47,7 @@ public class Agent extends AbstractRole {
 	private Date				moment;
 
 	@Optional
-	@ValidString
+	@ValidLongText
 	@Automapped
 	private String				bio;
 
