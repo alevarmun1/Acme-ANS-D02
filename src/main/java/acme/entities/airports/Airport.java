@@ -4,7 +4,6 @@ package acme.entities.airports;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
@@ -31,8 +30,8 @@ public class Airport extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
+	@ValidString(pattern = "^[A-Z]{3}$", message = "{validation.airport.code}")
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airport.code}")
 	private String				code;
 
 	@Mandatory
@@ -62,7 +61,7 @@ public class Airport extends AbstractEntity {
 
 	@Optional
 	@Automapped
-	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
+	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
 	private String				contactPhoneNumber;
 
 	// Derived attributes

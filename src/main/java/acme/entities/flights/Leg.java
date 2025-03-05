@@ -12,7 +12,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
@@ -32,7 +31,7 @@ public class Leg extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@Pattern(regexp = "^[A-Z]{2}\\d{4}$", message = "{validation.leg.flightNumber}")
+	@ValidString(pattern = "^[A-Z]{2}\\d{4}$", message = "{validation.leg.flightNumber}")
 	@Column(unique = true)
 	private String				flightNumber;
 
