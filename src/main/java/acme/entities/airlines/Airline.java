@@ -17,6 +17,7 @@ import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,12 +31,12 @@ public class Airline extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				name;
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{3}$")
+	@ValidString(pattern = "^[A-Z]{2}X$")
 	@Column(unique = true)
 	private String				code;
 
