@@ -48,12 +48,12 @@ public class Tasks extends AbstractEntity {
 	// Relationships
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private MaintenanceRecords	maintenanceRecord;
 
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Technicians			technician;
 
 }

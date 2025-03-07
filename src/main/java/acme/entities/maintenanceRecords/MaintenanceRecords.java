@@ -58,7 +58,7 @@ public class MaintenanceRecords extends AbstractEntity {
 	// Relationships
 	@Mandatory
 	@Valid
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Aircraft			aircraft;
 
 }
