@@ -14,7 +14,7 @@ import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
-import acme.constraints.ValidLongText;
+import acme.client.components.validation.ValidString;
 import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,14 +39,14 @@ public class TrackingLog extends AbstractEntity {
 	@Mandatory
 	@ValidScore
 	@Automapped
-	private Double				percentage;
+	private double				percentage;
 
 	@Mandatory
 	@Automapped
-	private boolean				accepted;
+	private TrackingLogStatus	status;
 
 	@Mandatory
-	@ValidLongText
+	@ValidString(min = 0, max = 255)
 	@Automapped
 	private String				resolution;
 
