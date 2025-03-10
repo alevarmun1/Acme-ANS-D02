@@ -6,4 +6,9 @@ validation.airport.code = El código de un aeropuerto debe seguir el patrón ^[A
 validation.airport.contactPhoneNumber = El número de teléfono de contacto debe seguir el patrón ^\\+?\\d{6,15}$
 validation.airline.code = El código de una aerolínea debe seguir el patrón ^[A-Z]{2}X$
 validation.airline.phoneNumber = El número de teléfono debe seguir el patrón ^\\+?\\d{6,15}$
+validation.trackingLog.mandatory-Resolution = La resolución de un registro "aceptado" o "rechazado" no puede ser nula
+validation.trackingLog.resolution-Taken = El estatus de un registro que no está resuelto al 100% debe ser "pendiente"
+validation.trackingLog.resolution-Not-Taken = Un registro debe estar 100% resuelto para que su estatus sea "aceptado" o "rechazado"
+validation.trackingLog.ascending-percentage = El porcentaje de resolución debe ser monótonamente creciente
 validation.activityLog.beforeLeg = El momento de registro debe ser igual o posterior a la llegada programada del tramo
+
