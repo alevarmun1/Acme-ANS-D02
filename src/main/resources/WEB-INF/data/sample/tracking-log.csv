@@ -25,11 +25,11 @@ tracking-log-15,2012/07/02 00:00,' or 'A' = 'A,50.00,PENDING,"Lorem ipsum dolor 
 tracking-log-16,2012/07/02 00:00,"Lorem ipsum dolor sit ame",0.00,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
 tracking-log-17,2012/07/02 00:00,"Lorem ipsum dolor sit ame",0.01,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
 tracking-log-18,2012/07/02 00:00,"Lorem ipsum dolor sit ame",99.99,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
-tracking-log-19,2012/07/02 00:00,"Lorem ipsum dolor sit ame",100.00,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
+tracking-log-19,2012/07/02 00:00,"Lorem ipsum dolor sit ame",100.00,ACCEPTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
 
 # status - standard variations
-tracking-log-35,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,ACCEPTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
-tracking-log-36,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,REJECTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
+tracking-log-20,2012/07/02 00:00,"Lorem ipsum dolor sit ame",100.00,ACCEPTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
+tracking-log-36,2012/07/02 00:00,"Lorem ipsum dolor sit ame",100.00,REJECTED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-01
 
 # resolution -standard variations
 tracking-log-21,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,L,claim-01
@@ -42,6 +42,7 @@ tracking-log-27,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,洛�
 tracking-log-28,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,<marquee>Hacked</marquee>,claim-01
 tracking-log-29,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,<script>alert(‘Hacked!’);</script>,claim-01
 tracking-log-30,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,' or 'A' = 'A,claim-01
+tracking-log-35,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,,claim-01
 
 # claim -standard variations
 tracking-log-31,2012/07/02 00:00,"Lorem ipsum dolor sit ame",50.00,PENDING,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",claim-02
