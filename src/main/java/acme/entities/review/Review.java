@@ -58,5 +58,6 @@ public class Review extends AbstractEntity {
 
 	// Derived attributes
 
-	// Relationships
+	// Relationships	
+
 }

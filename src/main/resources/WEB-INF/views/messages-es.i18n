@@ -6,3 +6,4 @@ validation.airport.code = El código de un aeropuerto debe seguir el patrón ^[A
 validation.airport.contactPhoneNumber = El número de teléfono de contacto debe seguir el patrón ^\\+?\\d{6,15}$
 validation.airline.code = El código de una aerolínea debe seguir el patrón ^[A-Z]{2}X$
 validation.airline.phoneNumber = El número de teléfono debe seguir el patrón ^\\+?\\d{6,15}$
+validation.activityLog.beforeLeg = El momento de registro debe ser igual o posterior a la llegada programada del tramo
