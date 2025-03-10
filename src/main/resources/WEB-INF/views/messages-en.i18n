@@ -10,3 +10,4 @@ validation.trackingLog.mandatory-Resolution = The resolution of an accepted or r
 validation.trackingLog.resolution-Not-Taken = The resolution of a log 100% resolved has to be accepted o rejected
 validation.trackingLog.resolution-Taken = The status of a log not 100% resolved has to be pending
 validation.trackingLog..ascending-percentage = The resolution percentage must be monotonically increasing.
+validation.activityLog.beforeLeg = The registration moment must be equal or after the leg scheduled arrival

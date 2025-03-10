@@ -10,3 +10,5 @@ validation.trackingLog.mandatory-Resolution = La resolución de un registro "ace
 validation.trackingLog.resolution-Taken = El estatus de un registro que no está resuelto al 100% debe ser "pendiente"
 validation.trackingLog.resolution-Not-Taken = Un registro debe estar 100% resuelto para que su estatus sea "aceptado" o "rechazado"
 validation.trackingLog.ascending-percentage = El porcentaje de resolución debe ser monótonamente creciente
+validation.activityLog.beforeLeg = El momento de registro debe ser igual o posterior a la llegada programada del tramo
+
