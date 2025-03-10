@@ -18,7 +18,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
-import acme.realms.Manager;
+import acme.realms.managers.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
