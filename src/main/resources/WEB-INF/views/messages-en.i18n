@@ -6,3 +6,4 @@ validation.airport.code = The code of an airport must follow the pattern ^[A-Z]{
 validation.airport.contactPhoneNumber = The contact phone number must follow the pattern ^\\+?\\d{6,15}$
 validation.airline.code = The code of an airline must follow the pattern ^[A-Z]{2}X$
 validation.airline.phoneNumber = The phone number must follow the pattern ^\\+?\\d{6,15}$
+validation.activityLog.beforeLeg = The registration moment must be equal or after the leg scheduled arrival
