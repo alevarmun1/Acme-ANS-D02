@@ -31,29 +31,28 @@ public class Booking extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@Column(unique = true)
 	@ValidString(pattern = "^[A-Z0-9]{6,8}$")
+	@Column(unique = true)
 	private String				locatorCode;
 
 	@Mandatory
-	@Automapped
-	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				purchaseMoment;
 
 	@Mandatory
-	@Automapped
 	@Valid
+	@Automapped
 	private TravelClass			travelClass;
 
 	@Mandatory
-	@Automapped
 	@ValidNumber(min = 0)
+	@Automapped
 	private Double				price;
 
 	@Optional
+	@ValidNumber(integer = 4)
 	@Automapped
-	@ValidNumber(min = 4, max = 4)
 	private Integer				lastCreditCardDigits;
 
 	// Relationships
