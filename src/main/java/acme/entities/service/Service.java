@@ -3,16 +3,17 @@ package acme.entities.service;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
-import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.entities.airports.Airport;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -48,8 +49,15 @@ public class Service extends AbstractEntity {
 	private String				promotionCode;
 
 	@Optional
-	@ValidMoney
+	@ValidNumber(min = 0, max = 100)
 	@Automapped
-	private Money				moneyDiscounted;
+	private Double				moneyDiscountedPercentage;
+
+	// Relationships
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Airport				airport;
 
 }

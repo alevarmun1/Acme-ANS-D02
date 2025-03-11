@@ -1,30 +1,24 @@
 
-package acme.entities.activityLog;
-
-import java.util.Date;
+package acme.entities.tasks;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.constraints.ValidActivityLog;
-import acme.entities.flightAssignment.FlightAssignment;
+import acme.entities.maintenanceRecords.MaintenanceRecords;
+import acme.realms.Technicians;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@ValidActivityLog
-public class ActivityLog extends AbstractEntity {
+public class Tasks extends AbstractEntity {
 
 	// Serialisation identifier
 	private static final long	serialVersionUID	= 1L;
@@ -32,14 +26,9 @@ public class ActivityLog extends AbstractEntity {
 	// Attributes
 
 	@Mandatory
-	@ValidMoment(past = true)			//validar que el momento sea después de la finalización del leg
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				registrationMoment;
-
-	@Mandatory
-	@ValidString(max = 50)
+	@Valid
 	@Automapped
-	private String				typeOfIncident;
+	private TaskType			taskType;
 
 	@Mandatory
 	@ValidString(max = 255)
@@ -49,14 +38,22 @@ public class ActivityLog extends AbstractEntity {
 	@Mandatory
 	@ValidNumber(min = 0, max = 10)
 	@Automapped
-	private Integer				severityLevel;
+	private Integer				priority;
 
-	// Derived attributes
+	@Mandatory
+	@ValidNumber(min = 0)
+	@Automapped
+	private Integer				estimatedDuration;
 
 	// Relationships
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private MaintenanceRecords	maintenanceRecord;
 
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private FlightAssignment	assignment;
+	private Technicians			technician;
+
 }

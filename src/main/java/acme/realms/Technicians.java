@@ -3,6 +3,7 @@ package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.mappings.Automapped;
@@ -16,40 +17,42 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Customer extends AbstractRole {
+public class Technicians extends AbstractRole {
+
+	// Serialisation identifier
 
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
+
 	@Mandatory
+	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$")
 	@Column(unique = true)
-	@ValidString(min = 1, max = 9, pattern = "^[A-Z]{2,3}\\d{6}$")
-	private String				identifier;
+	private String				licenseNumber;
 
 	@Mandatory
+	@ValidString(pattern = "^\\+?\\d{6,15}$")
 	@Automapped
-	@ValidString(min = 6, max = 15, pattern = "^\\+?\\d{6,15}$")
-	private String				phone;
+	private String				phoneNumber;
 
 	@Mandatory
+	@ValidString(max = 50)
 	@Automapped
-	@ValidString(min = 1, max = 255)
-	private String				physicalAddress;
+	private String				specialisation;
 
 	@Mandatory
+	@Valid
 	@Automapped
-	@ValidString(min = 1, max = 50)
-	private String				city;
+	private Boolean				annualHealthTestPassed;
 
 	@Mandatory
+	@ValidNumber(min = 0)
 	@Automapped
-	@ValidString(min = 1, max = 50)
-	private String				country;
+	private Integer				experienceYears;
 
 	@Optional
+	@ValidString(max = 255)
 	@Automapped
-	@ValidNumber(min = 0, max = 500000)
-	private Integer				points;
+	private String				certifications;
 
-	// Relationships
 }
