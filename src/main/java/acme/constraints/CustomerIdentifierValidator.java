@@ -3,12 +3,19 @@ package acme.constraints;
 
 import javax.validation.ConstraintValidatorContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.realms.customers.Customer;
+import acme.realms.customers.CustomerRepository;
 
 @Validator
 public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomerIdentifier, Customer> {
+
+	@Autowired
+	private CustomerRepository repository;
+
 
 	@Override
 	protected void initialise(final ValidCustomerIdentifier constraintAnnotation) {
@@ -18,12 +25,9 @@ public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomer
 	@Override
 	public boolean isValid(final Customer customer, final ConstraintValidatorContext context) {
 
-		if (customer == null)
-			return false;
-		if (context == null)
-			return false;
+		assert context != null;
 
-		boolean validIdentifier = false;
+		boolean result;
 
 		if (customer.getUserAccount() == null)
 			super.state(context, false, "*", "javax.validation.constraints.NotNull.message");
@@ -31,10 +35,14 @@ public class CustomerIdentifierValidator extends AbstractValidator<ValidCustomer
 			String initials = this.getInitials(customer);
 			String identifier = customer.getIdentifier();
 
-			if (identifier != null)
-				validIdentifier = identifier.startsWith(initials);
+			if (identifier == null)
+				super.state(context, false, "identifier", "javax.validation.constraints.NotNull.message");
+			else if (!identifier.startsWith(initials))
+				super.state(context, false, "identifier", "acme.constraints.ValidCustomerIdentifier.message");
+
 		}
-		return validIdentifier;
+		result = !super.hasErrors(context);
+		return result;
 	}
 
 	private String getInitials(final Customer customer) {
