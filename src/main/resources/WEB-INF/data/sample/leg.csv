@@ -1,0 +1,49 @@
+key,flightNumber,scheduledDeparture,scheduledArrival,status,departureAirport,arrivalAirport,aircraft,key:flight
+#flightNumber variations
+leg-01,AA123456,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-02,ZZ543210,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-03,AAA000000,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-04,ZZZ999999,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-05,AA000000,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-06,ZZ999999,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#scheduledDeparture variations
+leg-07,AA000001,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-08,AA000002,2000/01/01 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-09,AA000003,2000/01/01 00:01,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-10,AA000004,2022/07/29 23:59,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-11,AA000005,2022/07/30 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#scheduledArrival variations
+leg-12,AA000006,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-13,AA000007,2012/07/02 00:00,2000/01/01 00:00,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-14,AA000008,2012/07/02 00:00,2000/01/01 00:01,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-15,AA000009,2012/07/02 00:00,2022/07/29 23:59,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-16,AA000010,2012/07/02 00:00,2022/07/30 00:00,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#status variations
+leg-17,AA000011,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-18,AA000012,2012/07/02 00:00,2012/07/02 04:30,DELAYED,Sevilla, Barcelona, aircraft, flight-01
+leg-19,AA000013,2012/07/02 00:00,2012/07/02 04:30,CANCELLED,Sevilla, Barcelona, aircraft, flight-01
+leg-20,AA000014,2012/07/02 00:00,2012/07/02 04:30,LANDED,Sevilla, Barcelona, aircraft, flight-01
+#departureAirport variations
+leg-21,AA000015,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-22,AA000016,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-23,AA000017,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-24,AA000018,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-25,AA000019,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#arrivalAirport variations
+leg-26,AA000020,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-27,AA000021,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-28,AA000022,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-29,AA000023,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-30,AA000024,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#aircraft variations
+leg-31,AA000025,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-32,AA000026,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-33,AA000027,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-34,AA000028,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-35,AA000029,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+#key:flight variations
+leg-36,AA000030,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-01
+leg-37,AA000031,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-02
+leg-38,AA000032,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-03
+leg-39,AA000033,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-04
+leg-40,AA000034,2012/07/02 00:00,2012/07/02 04:30,ONTIME,Sevilla, Barcelona, aircraft, flight-05
