@@ -1,49 +1,45 @@
-key,name,pictureLink,avgDwellTime,promotionCode,moneyDiscountedPercentage,key:airport
+key,name,pictureLink,avgDwellTime,promotionCode,moneyDiscountedPercentage
 #base entity
-service-00,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,JOJR-38,50.00,airport-00
-#name - standard variation,"","","","","",""
-service-01,L,http://lorem.com/ipsum,60.00,ZIPE-25,50.00,airport-00
-service-02,Lo,http://lorem.com/ipsum,60.00,FAMW-95,50.00,airport-00
-service-03,"Lorem ipsum dolor sit amet, consectetur adipiscin",http://lorem.com/ipsum,60.00,KTRY-35,50.00,airport-00
-service-04,"Lorem ipsum dolor sit amet, consectetur adipiscing",http://lorem.com/ipsum,60.00,ADRE-30,50.00,airport-00
-service-05,โลเร็ม อิปซัม,http://lorem.com/ipsum,60.00,FGOJ-92,50.00,airport-00
-service-06,لوريم إيبسوم,http://lorem.com/ipsum,60.00,OBFH-28,50.00,airport-00
-service-07,洛伦·伊普森,http://lorem.com/ipsum,60.00,LIMS-04,50.00,airport-00
-service-08,<marquee>Hacked</marquee>,http://lorem.com/ipsum,60.00,BCGZ-82,50.00,airport-00
-service-09,<script>alert(‘Hacked!’);</script>,http://lorem.com/ipsum,60.00,DGHK-26,50.00,airport-00
-service-10,' or 'A' = 'A,http://lorem.com/ipsum,60.00,AMIP-74,50.00,airport-00
+service-00,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,JOJR-38,50.00
+#name - standard variation
+service-01,L,http://lorem.com/ipsum,60.00,ZIPE-25,50.00
+service-02,Lo,http://lorem.com/ipsum,60.00,FAMW-95,50.00
+service-03,"Lorem ipsum dolor sit amet, consectetur adipiscin",http://lorem.com/ipsum,60.00,KTRY-35,50.00
+service-04,"Lorem ipsum dolor sit amet, consectetur adipiscing",http://lorem.com/ipsum,60.00,ADRE-30,50.00
+service-05,โลเร็ม อิปซัม,http://lorem.com/ipsum,60.00,FGOJ-92,50.00
+service-06,لوريم إيبسوم,http://lorem.com/ipsum,60.00,OBFH-28,50.00
+service-07,洛伦·伊普森,http://lorem.com/ipsum,60.00,LIMS-04,50.00
+service-08,<marquee>Hacked</marquee>,http://lorem.com/ipsum,60.00,BCGZ-82,50.00
+service-09,<script>alert(‘Hacked!’);</script>,http://lorem.com/ipsum,60.00,DGHK-26,50.00
+service-10,' or 'A' = 'A,http://lorem.com/ipsum,60.00,AMIP-74,50.00
 #pictureLink - standard variation
-service-11,Lorem ipsum dolor sit ame,ftp://a,60.00,EYSI-69,50.00,airport-00
-service-12,Lorem ipsum dolor sit ame,ftp://a.b,60.00,QCEG-56,50.00,airport-00
-service-13,Lorem ipsum dolor sit ame,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",60.00,DPOL-98,50.00,airport-00
-service-14,Lorem ipsum dolor sit ame,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",60.00,QVGG-20,50.00,airport-00
-service-15,Lorem ipsum dolor sit ame,https://www.lorem-ipsum.org,60.00,CUAW-50,50.00,airport-00
-service-16,Lorem ipsum dolor sit ame,ftp://www.lorem-ipsum.org,60.00,VHXD-03,50.00,airport-00
-service-17,Lorem ipsum dolor sit ame,http://www.lorem-ipsum.org/dolor/sit.html,60.00,HUKE-93,50.00,airport-00
-service-18,Lorem ipsum dolor sit ame,http://www.lorem-ipsum.org/dolor/sit.html#dolor,60.00,GAHS-36,50.00,airport-00
-service-19,Lorem ipsum dolor sit ame,http://example.org?a=1&b=2,60.00,RXGX-21,50.00,airport-00
-service-20,Lorem ipsum dolor sit ame,http://example.org?,60.00,MRAJ-85,50.00,airport-00
-service-21,Lorem ipsum dolor sit ame,http://example.org?a,60.00,ZSOA-45,50.00,airport-00
-service-22,Lorem ipsum dolor sit ame,http://example.org?a&b,60.00,RSLL-10,50.00,airport-00
-service-23,Lorem ipsum dolor sit ame,http://example.org/,60.00,YMHP-79,50.00,airport-00
-service-24,Lorem ipsum dolor sit ame,http://example.org/a,60.00,FZIB-75,50.00,airport-00
-service-25,Lorem ipsum dolor sit ame,http://example.org/a/b,60.00,WEMB-10,50.00,airport-00
-service-26,Lorem ipsum dolor sit ame,http://example.org/a/b?,60.00,JDWM-27,50.00,airport-00
-service-27,Lorem ipsum dolor sit ame,http://example.org/a/b?a&b,60.00,TKIZ-65,50.00,airport-00
+service-11,Lorem ipsum dolor sit ame,ftp://a,60.00,EYSI-69,50.00
+service-12,Lorem ipsum dolor sit ame,ftp://a.b,60.00,QCEG-56,50.00
+service-13,Lorem ipsum dolor sit ame,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",60.00,DPOL-98,50.00
+service-14,Lorem ipsum dolor sit ame,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",60.00,QVGG-20,50.00
+service-15,Lorem ipsum dolor sit ame,https://www.lorem-ipsum.org,60.00,CUAW-50,50.00
+service-16,Lorem ipsum dolor sit ame,ftp://www.lorem-ipsum.org,60.00,VHXD-03,50.00
+service-17,Lorem ipsum dolor sit ame,http://www.lorem-ipsum.org/dolor/sit.html,60.00,HUKE-93,50.00
+service-18,Lorem ipsum dolor sit ame,http://www.lorem-ipsum.org/dolor/sit.html#dolor,60.00,GAHS-36,50.00
+service-19,Lorem ipsum dolor sit ame,http://example.org?a=1&b=2,60.00,RXGX-21,50.00
+service-20,Lorem ipsum dolor sit ame,http://example.org?,60.00,MRAJ-85,50.00
+service-21,Lorem ipsum dolor sit ame,http://example.org?a,60.00,ZSOA-45,50.00
+service-22,Lorem ipsum dolor sit ame,http://example.org?a&b,60.00,RSLL-10,50.00
+service-23,Lorem ipsum dolor sit ame,http://example.org/,60.00,YMHP-79,50.00
+service-24,Lorem ipsum dolor sit ame,http://example.org/a,60.00,FZIB-75,50.00
+service-25,Lorem ipsum dolor sit ame,http://example.org/a/b,60.00,WEMB-10,50.00
+service-26,Lorem ipsum dolor sit ame,http://example.org/a/b?,60.00,JDWM-27,50.00
+service-27,Lorem ipsum dolor sit ame,http://example.org/a/b?a&b,60.00,TKIZ-65,50.00
 #avgDwellTime - standard variation
-service-28,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,0.00,PZQL-34,50.00,airport-00
-service-29,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,0.01,GRYB-86,50.00,airport-00
-service-30,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,119.99,TVOQ-61,50.00,airport-00
-service-31,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,120.00,KHOI-80,50.00,airport-00
-#promotionCode - standard variation,"","","","","",""
-service-32,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,"",50.00,airport-00
+service-28,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,0.00,PZQL-34,50.00
+service-29,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,0.01,GRYB-86,50.00
+service-30,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,119.99,TVOQ-61,50.00
+service-31,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,120.00,KHOI-80,50.00
+#promotionCode - standard variation
+service-32,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,"",50.00
 #moneyDiscountedPercentage - standard variation
-service-33,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,VLYA-93,0.00,airport-00
-service-34,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,GGKP-95,0.01,airport-00
-service-35,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,KBJK-78,99.99,airport-00
-service-36,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,ILXB-28,100.00,airport-00
-service-37,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,LTYN-14,"",airport-00
-#airport - standard variation,""
-service-38,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,NABI-22,50.00,airport-05
-service-39,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,GIAN-83,50.00,airport-06
-service-40,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,FNTC-11,50.00,airport-06
+service-33,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,VLYA-93,0.00
+service-34,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,GGKP-95,0.01
+service-35,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,KBJK-78,99.99
+service-36,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,ILXB-28,100.00
+service-37,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,LTYN-14,""
