@@ -3,24 +3,17 @@ package acme.constraints;
 
 import javax.validation.ConstraintValidatorContext;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.activityLog.ActivityLog;
-import acme.entities.activityLog.ActivityLogRepository;
 
 @Validator
 public class ActivityLogValidator extends AbstractValidator<ValidActivityLog, ActivityLog> {
 
 	// Internal state ---------------------------------------------------------------------
 
-	@Autowired
-	private ActivityLogRepository repository;
-
 	// ConstraintValidator interface ------------------------------------------------------
-
 
 	@Override
 	protected void initialise(final ValidActivityLog annotation) {

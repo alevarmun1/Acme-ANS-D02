@@ -1,49 +1,46 @@
 key,employeeCode,phoneNumber,languageSkills,availabilityStatus,key:airline,salary,yearsOfExperience
-
 #base entity
-member-01,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,10
-
+member-01,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 #employeeCode variations
-member-02,ZZZ000000,+441279358395,Español e inglésEspañol e inglés,AVAILABLE,airline-01,EUR 500000.00,10
-member-03,AA999999,+441279358395,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-04,ZZ123456,+441279358395,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-05,BCD553423,+441279358395,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-
+member-02,ZZZ000000,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-03,AA999999,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-04,ZZ123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-05,BCD553423,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 #phoneNumber variations
-member-06,AAA123456,999999,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-07,AA666666,000000000000000,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-08,AAA123456,+123456,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-09,AAA123456,123456,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-member-10,AAA123456,+001234567890123,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-
+member-06,AAA123456,999999,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-07,AA666666,000000000000000,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-08,AAA123456,+123456,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-09,AAA123456,123456,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-10,AAA123456,+001234567890123,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 #languageSkills variations
-member-11,AAA123456,+441279358395,"Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",AVAILABLE,airline-01,EUR 500000.00,10
-member-12,AAA123456,+441279358395,"L",AVAILABLE,airline-01,EUR 500000.00,10
-member-13,AAA123456,+441279358395,"Lo",AVAILABLE,airline-01,EUR 500000.00,10
-member-14,AAA123456,+441279358395,"Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",AVAILABLE,airline-01,EUR 500000.00,10
-member-15,AAA123456,+441279358395,"Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",AVAILABLE,airline-01,EUR 500000.00,10
-member-16,AAA123456,+441279358395,"Español lengua madre e inglés C1",AVAILABLE,airline-01,EUR 500000.00,10
-
+member-11,AAA123456,+441279358395,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,AVAILABLE,airline-01,EUR 500000.00,10
+member-12,AAA123456,+441279358395,L,AVAILABLE,airline-01,EUR 500000.00,10
+member-13,AAA123456,+441279358395,Lo,AVAILABLE,airline-01,EUR 500000.00,10
+member-14,AAA123456,+441279358395,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor,AVAILABLE,airline-01,EUR 500000.00,10
+member-15,AAA123456,+441279358395,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,โลเร็ม อิปซัม,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,لوريم إيبسوم,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,洛伦·伊普森,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,<marquee>Hacked</marquee>,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,<script>alert(‘Hacked!’);</script>,AVAILABLE,airline-01,EUR 500000.00,10
+member-16,AAA123456,+441279358395,' or 'A' = 'A,AVAILABLE,airline-01,EUR 500000.00,10
 #availabilityStatus variations
-member-17,AAA123456,+441279358395,"Español lengua madre e inglés C1",ON_VACATION,airline-01,EUR 500000.00,10
-member-18,AAA123456,+441279358395,"Español lengua madre e inglés C1",ON_LEAVE,airline-01,EUR 500000.00,10
-
+member-17,AAA123456,+441279358395,Español lengua madre e inglés C1,ON_VACATION,airline-01,EUR 500000.00,10
+member-18,AAA123456,+441279358395,Español lengua madre e inglés C1,ON_LEAVE,airline-01,EUR 500000.00,10
 #airline variations
-member-19,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-02,EUR 500000.00,10
-member-20,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-03,EUR 500000.00,10
-member-21,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-04,EUR 500000.00,10
-member-22,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-05,EUR 500000.00,10
-
+member-19,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-02,EUR 500000.00,10
+member-20,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-03,EUR 500000.00,10
+member-21,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-04,EUR 500000.00,10
+member-22,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-05,EUR 500000.00,10
 #salary variations
-member-23,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 0.00,10
-member-24,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 0.01,10
-member-25,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 999999.99,10
-member-26,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 1000000.00,10
-
+member-23,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 0.00,10
+member-24,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 0.01,10
+member-25,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 999999.99,10
+member-26,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 1000000.00,10
 #yearsOfExperience variations
-member-27,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,60
-member-28,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,0
-member-29,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,1
-member-30,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,120
-member-31,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,119
-member-32,AAA123456,+441279358395,"Español e inglés",AVAILABLE,airline-01,EUR 500000.00,
+member-27,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,60
+member-28,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,0
+member-29,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,1
+member-30,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,120
+member-31,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,119
+member-32,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,
