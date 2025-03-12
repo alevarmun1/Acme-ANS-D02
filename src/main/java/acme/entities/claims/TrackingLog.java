@@ -30,8 +30,8 @@ public class TrackingLog extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
 	@Mandatory
@@ -45,6 +45,7 @@ public class TrackingLog extends AbstractEntity {
 	private double				percentage;
 
 	@Mandatory
+	@Valid
 	@Automapped
 	private TrackingLogStatus	status;
 
