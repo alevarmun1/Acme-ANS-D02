@@ -52,4 +52,6 @@ public class Service extends AbstractEntity {
 	@Automapped
 	private Double				moneyDiscountedPercentage;
 
+	// Relationships
+
 }

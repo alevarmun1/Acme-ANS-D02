@@ -31,8 +31,8 @@ public class Airport extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airport.code}")
+	@Column(unique = true)
 	private String				code;
 
 	@Mandatory
@@ -61,8 +61,8 @@ public class Airport extends AbstractEntity {
 	private String				email;
 
 	@Optional
-	@Automapped
 	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
+	@Automapped
 	private String				contactPhoneNumber;
 
 	// Derived attributes
