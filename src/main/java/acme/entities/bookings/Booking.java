@@ -11,14 +11,16 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.entities.flights.Flight;
-import acme.entities.passengers.Passenger;
+import acme.realms.customers.Customer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,29 +33,28 @@ public class Booking extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@Column(unique = true)
 	@ValidString(pattern = "^[A-Z0-9]{6,8}$")
+	@Column(unique = true)
 	private String				locatorCode;
 
 	@Mandatory
-	@Automapped
-	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				purchaseMoment;
 
 	@Mandatory
-	@Automapped
 	@Valid
+	@Automapped
 	private TravelClass			travelClass;
 
 	@Mandatory
+	@ValidMoney
 	@Automapped
-	@ValidNumber(min = 0)
-	private Double				price;
+	private Money				price;
 
 	@Optional
+	@ValidNumber(integer = 4)
 	@Automapped
-	@ValidNumber(min = 4, max = 4)
 	private Integer				lastCreditCardDigits;
 
 	// Relationships
@@ -61,7 +62,7 @@ public class Booking extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne
-	private Passenger			passenger;
+	private Customer			customer;
 
 	@Mandatory
 	@Valid
