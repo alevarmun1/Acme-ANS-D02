@@ -2,7 +2,6 @@
 package acme.entities.flights;
 
 import java.time.Duration;
-import java.time.Instant;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -12,13 +11,15 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
+import acme.client.helpers.MomentHelper;
+import acme.entities.aircrafts.Aircraft;
+import acme.entities.airports.Airport;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,12 +33,12 @@ public class Leg extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@Pattern(regexp = "^[A-Z]{2}\\d{4}$", message = "{validation.leg.flightNumber}")
+	@ValidString(pattern = "^[A-Z]{3}\\d{4}$", message = "{validation.leg.flightNumber}")
 	@Column(unique = true)
 	private String				flightNumber;
 
 	@Mandatory
-	@ValidMoment(past = true)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				scheduledDeparture;
 
@@ -51,30 +52,14 @@ public class Leg extends AbstractEntity {
 	@Automapped
 	private Status				status;
 
-	@Mandatory
-	@ValidString
-	@Automapped
-	private String				departureAirport;
-
-	@Mandatory
-	@ValidString
-	@Automapped
-	private String				arrivalAirport;
-
-	@Mandatory
-	@ValidString
-	@Automapped
-	private String				aircraft;
-
 
 	// Derived attributes
 	@Transient
-	public double duration() {
-		if (this.scheduledDeparture != null && this.scheduledArrival != null) {
-			long durationInSeconds = Duration.between(Instant.ofEpochMilli(this.scheduledDeparture.getTime()), Instant.ofEpochMilli(this.scheduledArrival.getTime())).toSeconds();
-			return durationInSeconds / 3600.0;
-		}
-		return 0;
+	public Duration getDuration() {
+		if (this.scheduledDeparture != null && this.scheduledArrival != null)
+			return MomentHelper.computeDuration(this.scheduledDeparture, this.scheduledArrival);
+		else
+			return Duration.ZERO;
 	}
 
 
@@ -82,5 +67,20 @@ public class Leg extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Flight flight;
+	private Flight		flight;
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Airport		departureAirport;
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Airport		arrivalAirport;
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Aircraft	aircraft;
 }
