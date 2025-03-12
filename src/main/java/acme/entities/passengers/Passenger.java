@@ -14,6 +14,8 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidString;
+import acme.constraints.ValidLongText;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,30 +28,30 @@ public class Passenger extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
+	@ValidLongText
 	@Automapped
-	@ValidString(min = 0, max = 256)
 	private String				name;
 
 	@Mandatory
-	@Automapped
 	@ValidEmail
+	@Automapped
 	private String				email;
 
 	@Mandatory
+	@ValidString(pattern = "^[A-Z0-9]{6,9}$")
 	@Automapped
-	@ValidString(min = 0, pattern = "^[A-Z0-9]{6,9}$")
 	private String				passport;
 
 	@Mandatory
-	@Automapped
-	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				dateOfBirth;
 
 	@Optional
+	@ValidShortText
 	@Automapped
-	@ValidString(min = 0, max = 51)
 	private String				specialNeeds;
 
 	// Relationships
+
 }
