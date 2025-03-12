@@ -1,14 +1,14 @@
 key,employeeCode,phoneNumber,languageSkills,availabilityStatus,key:airline,salary,yearsOfExperience
 #base entity
-member-01,AAA123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-01,JE123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 #employeeCode variations
-member-02,ZZZ000000,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
-member-03,AA999999,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
-member-04,ZZ123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
-member-05,BCD553423,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-02,CD000000,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-03,MRX999999,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-04,CMX123456,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-05,LS553423,+441279358395,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 #phoneNumber variations
 member-06,AAA123456,999999,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
-member-07,AA666666,000000000000000,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
+member-07,AAA123456,000000000000000,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 member-08,AAA123456,+123456,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 member-09,AAA123456,123456,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
 member-10,AAA123456,+001234567890123,Español lengua madre e inglés C1,AVAILABLE,airline-01,EUR 500000.00,10
