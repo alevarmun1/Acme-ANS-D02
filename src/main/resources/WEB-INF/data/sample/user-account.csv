@@ -10,10 +10,12 @@ user-account-agent-02,true,"UserIdentity{name: 'Perico', surname: 'ଜିପ୍�
 user-account-agent-03,true,"UserIdentity{name: 'Manager', surname: 'cerotres', email: 'manager3@acme.com'}",manager3,manager3
 user-account-manager-01,true,"UserIdentity{name: 'Alejandro', surname: 'Manager', email: 'alejandro@acme.com'}",manager1,manager1
 user-account-manager-02,true,"UserIdentity{name: 'โลเร็ม อิปซัม', surname: 'Thai', email: 'โลเร็ม อิปซัม@acme.com'}",manager2,manager2
-user-account-managerr-03,true,"UserIdentity{name: '洛伦·伊普森', surname: 'Chinese', email: '洛伦·伊普森@acme.com'}",manager3,manager3
+user-account-manager-03,true,"UserIdentity{name: '洛伦·伊普森', surname: 'Chinese', email: '洛伦·伊普森@acme.com'}",manager3,manager3
 user-account-member-01,true,"UserIdentity{name: 'Jose', surname: 'Esteve', email: 'joseesteve@acme.com'}",member1,member1
 user-account-member-02,true,"UserIdentity{name: 'Carlos', surname: 'Diaz', email: 'carlosdiaz@acme.com'}",member2,member2
 user-account-member-03,true,"UserIdentity{name: 'Monica', surname: 'Regidor', email: 'monicaregidor@acme.com'}",member3,member3
 user-account-member-04,true,"UserIdentity{name: 'Carolina', surname: 'Maduro', email: 'carolinamaduro@acme.com'}",member4,member4
 user-account-member-05,true,"UserIdentity{name: 'Lidia', surname: 'Segura', email: 'lidiasegura@acme.com'}",member,member
-
+user-account-technician-01,true,"UserIdentity{name: 'David', surname: 'Supa', email: 'supa@acme.com'}",technician1,technician1
+user-account-technician-02,true,"UserIdentity{name: 'Alvaro', surname: 'Koi', email: 'koi@acme.com'}",technician2,technician2
+user-account-technician-03,true,"UserIdentity{name: 'Alejandro', surname: 'Myrwin', email: 'myri@acme.com'}",technician3,technician3

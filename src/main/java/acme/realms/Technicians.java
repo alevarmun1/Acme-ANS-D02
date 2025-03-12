@@ -1,25 +1,23 @@
 
-package acme.entities.service;
+package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.Valid;
 
-import acme.client.components.basis.AbstractEntity;
+import acme.client.components.basis.AbstractRole;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
-import acme.client.components.validation.ValidUrl;
-import acme.constraints.ValidService;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@ValidService
-public class Service extends AbstractEntity {
+public class Technicians extends AbstractRole {
 
 	// Serialisation identifier
 
@@ -28,28 +26,33 @@ public class Service extends AbstractEntity {
 	// Attributes
 
 	@Mandatory
-	@ValidString(max = 50)
-	@Automapped
-	private String				name;
+	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$", message = "{validation.technicians.licenseNumber}")
+	@Column(unique = true)
+	private String				licenseNumber;
 
 	@Mandatory
-	@ValidUrl
+	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.technicians.phoneNumber}")
 	@Automapped
-	private String				pictureLink;
+	private String				phoneNumber;
+
+	@Mandatory
+	@ValidString(max = 50)
+	@Automapped
+	private String				specialisation;
+
+	@Mandatory
+	@Valid
+	@Automapped
+	private Boolean				annualHealthTestPassed;
 
 	@Mandatory
 	@ValidNumber(min = 0, max = 120)
 	@Automapped
-	private Double				avgDwellTime;
+	private Integer				experienceYears;
 
 	@Optional
-	@ValidString(pattern = "^[A-Z]{4}-[0-9]{2}$", message = "{validation.service.promotionCode2}")
-	@Column(unique = true)
-	private String				promotionCode;
-
-	@Optional
-	@ValidNumber(min = 0, max = 100)
+	@ValidString(max = 255)
 	@Automapped
-	private Double				moneyDiscountedPercentage;
+	private String				certifications;
 
 }
