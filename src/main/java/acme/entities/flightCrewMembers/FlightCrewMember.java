@@ -28,7 +28,7 @@ public class FlightCrewMember extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$")
+	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$")
 	@Column(unique = true)
 	private String				employeeCode;
 
