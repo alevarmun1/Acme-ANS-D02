@@ -1,0 +1,35 @@
+key,model,registrationNumber,capacity,cargoWeigth,status,details,key:airline
+#Base Entity
+aicraft-01,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#Model
+aicraft-02,L,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-03,Lo,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-04,"Lorem ipsum dolor sit amet, consectetur adipiscin",127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-05,"Lorem ipsum dolor sit amet, consectetur adipiscing",127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-06,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#RegistrationNumber
+aicraft-07,L,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-08,Lo,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-09,"Lorem ipsum dolor sit amet, consectetur adipiscin",127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-10,"Lorem ipsum dolor sit amet, consectetur adipiscing",127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#Capacity
+aicraft-11,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,0,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-12,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,1,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-13,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,254,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-14,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,255,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#cargoWeigth
+aicraft-15,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,2000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-16,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,2000.01,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-17,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,49999.99,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+aicraft-18,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,50000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#Status
+aicraft-19,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,UNDER_MAINTENANCE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-01
+#Details
+aicraft-20,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,L,airline-01
+aicraft-21,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,Lo,airline-01
+aicraft-22,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",airline-01
+aicraft-23,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",airline-01
+#Airline
+aicraft-24,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-02
+aicraft-25,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit ame,127,26000.00,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",airline-03
+
