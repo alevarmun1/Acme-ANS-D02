@@ -24,23 +24,23 @@ public class Aircraft extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@Automapped
 	@ValidShortText
+	@Automapped
 	private String				model;
 
 	@Mandatory
-	@Column(unique = true)
 	@ValidShortText
+	@Column(unique = true)
 	private String				registrationNumber;
 
 	@Mandatory
+	@ValidNumber(min = 0, max = 255)
 	@Automapped
-	@ValidNumber(min = 0)
 	private Integer				capacity;
 
 	@Mandatory
-	@Automapped
 	@ValidNumber(min = 2000, max = 50000)
+	@Automapped
 	private Double				cargoWeigth;
 
 	@Mandatory
