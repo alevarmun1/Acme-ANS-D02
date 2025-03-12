@@ -17,21 +17,26 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidString;
+import acme.constraints.ValidMaintenanceRecord;
 import acme.entities.aircrafts.Aircraft;
+import acme.realms.Technicians;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@ValidMaintenanceRecord
 public class MaintenanceRecords extends AbstractEntity {
 
 	// Serialisation identifier
+
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
+
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				maintenanceMoment;
 
@@ -41,7 +46,7 @@ public class MaintenanceRecords extends AbstractEntity {
 	private MaintenanceStatus	maintenanceStatus;
 
 	@Mandatory
-	@ValidMoment(past = false)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				nextInspectionDate;
 
@@ -56,9 +61,15 @@ public class MaintenanceRecords extends AbstractEntity {
 	private String				notes;
 
 	// Relationships
+
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Aircraft			aircraft;
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Technicians			technician;
 
 }
