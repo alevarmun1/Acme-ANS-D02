@@ -10,16 +10,11 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ActivityLogValidator.class)
+@Constraint(validatedBy = CrewMemberCodeValidator.class)
 @Target(ElementType.TYPE)
+public @interface ValidCrewMemberCode {
 
-public @interface ValidActivityLog {
-
-	//Standard validation properties -------------------------------------------------------------------------
-
-	String message() default "{acme.validation.activityLog.beforeLeg}";
-
+	String message() default "";
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
-
 }

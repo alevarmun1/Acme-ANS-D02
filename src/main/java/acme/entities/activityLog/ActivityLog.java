@@ -32,7 +32,7 @@ public class ActivityLog extends AbstractEntity {
 	// Attributes
 
 	@Mandatory
-	@ValidMoment(past = true)			//validar que el momento sea después de la finalización del leg
+	@ValidMoment(past = true)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				registrationMoment;
 
