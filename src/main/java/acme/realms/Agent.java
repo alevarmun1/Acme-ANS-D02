@@ -19,6 +19,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidAgent;
 import acme.constraints.ValidLongText;
 import acme.entities.airlines.Airline;
 import lombok.Getter;
@@ -27,13 +28,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAgent
 public class Agent extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{2,3}\\d{6}$")
+	@Column(unique = true)
 	private String				code;
 
 	@Mandatory
@@ -42,8 +44,8 @@ public class Agent extends AbstractRole {
 	private String				languages;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
 	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
 	@Optional
