@@ -36,7 +36,7 @@ service-29,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,0.01,GRYB-25,50.00
 service-30,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,119.99,TVOQ-25,50.00
 service-31,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,120.00,KHOI-25,50.00
 #promotionCode - standard variation
-service-32,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,"",50.00
+service-32,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,,50.00
 #moneyDiscountedPercentage - standard variation
 service-33,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,VLYA-25,0.00
 service-34,Lorem ipsum dolor sit ame,http://lorem.com/ipsum,60.00,GGKP-25,0.01
