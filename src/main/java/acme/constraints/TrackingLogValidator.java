@@ -9,7 +9,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.claims.TrackingLog;
 import acme.entities.claims.TrackingLogRepository;
-import acme.entities.claims.TrackingLogStatus;
+import acme.entities.claims.ClaimStatus;
 
 @Validator
 public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, TrackingLog> {
@@ -42,12 +42,12 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 			super.state(context, emptyResolution, "resolution", "acme.validation.trackingLog.mandatory-Resolution.message");
 
 			boolean onlyAcceptedOrRejected;
-			onlyAcceptedOrRejected = trackingLog.getStatus().equals(TrackingLogStatus.ACCEPTED) || trackingLog.getStatus().equals(TrackingLogStatus.REJECTED);
+			onlyAcceptedOrRejected = trackingLog.getStatus().equals(ClaimStatus.ACCEPTED) || trackingLog.getStatus().equals(ClaimStatus.REJECTED);
 			super.state(context, onlyAcceptedOrRejected, "status", "acme.validation.trackingLog.resolution-Not-Taken.message");
 
 		} else if (trackingLog.getPercentage() < 100.00) {
 			boolean onlyPending;
-			onlyPending = trackingLog.getStatus().equals(TrackingLogStatus.PENDING);
+			onlyPending = trackingLog.getStatus().equals(ClaimStatus.PENDING);
 			super.state(context, onlyPending, "status", "acme.validation.trackingLog.resolution-Taken.message");
 			/*
 			 * boolean ascending;
