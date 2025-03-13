@@ -22,16 +22,16 @@ review-17,Lorem ipsum dolor sit ame,2012/07/02 00:00,<marquee>Hacked</marquee>,L
 review-18,Lorem ipsum dolor sit ame,2012/07/02 00:00,<script>alert(‘Hacked!’);</script>,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,5,TRUE
 review-19,Lorem ipsum dolor sit ame,2012/07/02 00:00,' or 'A' = 'A,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,5,TRUE
 #text variations
-review-20,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,L,5,TRUE
-review-21,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,Lo,5,TRUE
-review-22,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor,5,TRUE
-review-23,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*,5,TRUE
-review-24,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,โลเร็ม อิปซัม,5,TRUE
-review-25,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,لوريم إيبسوم,5,TRUE
-review-26,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,洛伦·伊普森,5,TRUE
-review-27,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,<marquee>Hacked</marquee>,5,TRUE
-review-28,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,<script>alert(‘Hacked!’);</script>,5,TRUE
-review-29,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,' or 'A' = 'A,5,TRUE
+review-20,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,L,5,TRUE
+review-21,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,Lo,5,TRUE
+review-22,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor,5,TRUE
+review-23,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*,5,TRUE
+review-24,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,โลเร็ม อิปซัม,5,TRUE
+review-25,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,لوريم إيبسوم,5,TRUE
+review-26,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,洛伦·伊普森,5,TRUE
+review-27,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,<marquee>Hacked</marquee>,5,TRUE
+review-28,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,<script>alert(‘Hacked!’);</script>,5,TRUE
+review-29,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,' or 'A' = 'A,5,TRUE
 #score variations
 review-30,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,0,TRUE
 review-31,Lorem ipsum dolor sit ame,2012/07/02 00:00,Lorem ipsum dolor sit ame,Lorem ipsum dolor sit amet  consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,1,TRUE
