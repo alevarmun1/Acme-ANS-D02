@@ -1,12 +1,8 @@
 
 package acme.entities.flights;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -14,11 +10,10 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
-import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-import acme.client.components.validation.ValidNumber;
-import acme.client.components.validation.ValidString;
-import acme.realms.Manager;
+import acme.constraints.ValidLongText;
+import acme.constraints.ValidShortText;
+import acme.realms.managers.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,14 +27,14 @@ public class Flight extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				tag;
 
 	@Mandatory
 	@Valid
 	@Automapped
-	private Boolean				indication;
+	private Boolean				selfTransfer;
 
 	@Mandatory
 	@ValidMoney
@@ -47,64 +42,76 @@ public class Flight extends AbstractEntity {
 	private Money				cost;
 
 	@Optional
-	@ValidString(max = 255)
+	@ValidLongText
 	@Automapped
 	private String				description;
 
-	@Mandatory
-	@ValidMoment(past = true)
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				scheduledDeparture;
-
-	@Mandatory
-	@ValidMoment
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				scheduledArrival;
-
-	@Mandatory
-	@ValidString
-	@Automapped
-	private String				originCity;
-
-	@Mandatory
-	@ValidString
-	@Automapped
-	private String				destinationCity;
-
-	@Mandatory
-	@ValidNumber
-	@Automapped
-	private int					numberOfLayovers;
-
 	// Derived attributes
 	//	@Transient
-	//	public LocalDateTime getScheduledDeparture() {
-	//		return legs != null && !legs.isEmpty() ? legs.stream().map(Leg::getScheduledDeparture).min(LocalDateTime::compareTo).orElse(null) : null;
+	//	public Date getScheduledDeparture() {
+	//		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MIN(l.scheduledDeparture) FROM Leg l WHERE l.flight = :flight", Date.class);
+	//		query.setParameter("flight", this);
+	//		return query.getSingleResult();
 	//	}
 	//
 	//	@Transient
-	//	public LocalDateTime getScheduledArrival() {
-	//		return legs != null && !legs.isEmpty() ? legs.stream().map(Leg::getScheduledArrival).max(LocalDateTime::compareTo).orElse(null) : null;
+	//	public Date getScheduledArrival() {
+	//		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MAX(l.scheduledArrival) FROM Leg l WHERE l.flight = :flight", Date.class);
+	//		query.setParameter("flight", this);
+	//		return query.getSingleResult();
 	//	}
 	//
 	//	@Transient
 	//	public String getOriginCity() {
-	//		return legs != null && !legs.isEmpty() ? legs.get(0).getDepartureAirport() : null;
+	//		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.departureAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledDeparture ASC", String.class);
+	//		query.setParameter("flight", this);
+	//		return query.setMaxResults(1).getSingleResult();
 	//	}
 	//
 	//	@Transient
 	//	public String getDestinationCity() {
-	//		return legs != null && !legs.isEmpty() ? legs.get(legs.size() - 1).getArrivalAirport() : null;
+	//		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.arrivalAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledArrival DESC", String.class);
+	//		query.setParameter("flight", this);
+	//		return query.setMaxResults(1).getSingleResult();
 	//	}
 	//
 	//	@Transient
 	//	public int getNumberOfLayovers() {
-	//		return legs != null && !legs.isEmpty() ? legs.size() - 1 : 0;
+	//		TypedQuery<Long> query = this.entityManager.createQuery("SELECT COUNT(l) FROM Leg l WHERE l.flight = :flight", Long.class);
+	//		query.setParameter("flight", this);
+	//		Long count = query.getSingleResult();
+	//		return count != null ? Math.max(count.intValue() - 1, 0) : 0;
+	//	}
+
+	//	@Transient
+	//	public Date getScheduledDeparture(final FlightService flightService) {
+	//		return flightService.getScheduledDeparture(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public Date getScheduledArrival(final FlightService flightService) {
+	//		return flightService.getScheduledArrival(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public String getOriginCity(final FlightService flightService) {
+	//		return flightService.getOriginCity(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public String getDestinationCity(final FlightService flightService) {
+	//		return flightService.getDestinationCity(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public int getNumberOfLayovers(final FlightService flightService) {
+	//		return flightService.getNumberOfLayovers(this.getId());
 	//	}
 
 	// Relationships
 	@Mandatory
 	@Valid
-	@ManyToOne//(optional = false)
+	@ManyToOne(optional = false)
 	private Manager				manager;
+
 }

@@ -4,7 +4,6 @@ package acme.entities.airports;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.mappings.Automapped;
@@ -13,6 +12,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidEmail;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,13 +26,13 @@ public class Airport extends AbstractEntity {
 
 	// Attributes
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				name;
 
 	@Mandatory
+	@ValidString(pattern = "^[A-Z]{3}$", message = "{validation.airport.code}")
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}$", message = "{validation.airport.code}")
 	private String				code;
 
 	@Mandatory
@@ -41,12 +41,12 @@ public class Airport extends AbstractEntity {
 	private OperationalScope	operationalScope;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				city;
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				country;
 
@@ -62,7 +62,7 @@ public class Airport extends AbstractEntity {
 
 	@Optional
 	@Automapped
-	@Pattern(regexp = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
+	@ValidString(pattern = "^\\+?\\d{6,15}$", message = "{validation.airport.contactPhoneNumber}")
 	private String				contactPhoneNumber;
 
 	// Derived attributes

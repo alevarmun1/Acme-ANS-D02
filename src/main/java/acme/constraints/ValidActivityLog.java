@@ -17,7 +17,7 @@ public @interface ValidActivityLog {
 
 	//Standard validation properties -------------------------------------------------------------------------
 
-	String message() default "";
+	String message() default "{acme.validation.activityLog.beforeLeg}";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

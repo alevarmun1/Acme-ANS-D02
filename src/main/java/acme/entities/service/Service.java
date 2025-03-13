@@ -5,20 +5,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Money;
 import acme.client.components.mappings.Automapped;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
-import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidString;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidService;
+import acme.constraints.ValidShortText;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@ValidService
 public class Service extends AbstractEntity {
 
 	// Serialisation identifier
@@ -28,7 +29,7 @@ public class Service extends AbstractEntity {
 	// Attributes
 
 	@Mandatory
-	@ValidString(max = 50)
+	@ValidShortText
 	@Automapped
 	private String				name;
 
@@ -38,18 +39,20 @@ public class Service extends AbstractEntity {
 	private String				pictureLink;
 
 	@Mandatory
-	@ValidNumber(min = 0)
+	@ValidNumber(min = 0, max = 120)
 	@Automapped
 	private Double				avgDwellTime;
 
 	@Optional
-	@ValidString(pattern = "^[A-Z]{4}-[0-9]{2}$")
+	@ValidString(pattern = "^[A-Z]{4}-[0-9]{2}$", message = "{validation.service.promotionCode2}")
 	@Column(unique = true)
 	private String				promotionCode;
 
 	@Optional
-	@ValidMoney
+	@ValidNumber(min = 0, max = 100)
 	@Automapped
-	private Money				moneyDiscounted;
+	private Double				moneyDiscountedPercentage;
+
+	// Relationships
 
 }
