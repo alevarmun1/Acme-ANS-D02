@@ -1,13 +1,8 @@
 
 package acme.entities.flights;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Transient;
-import javax.persistence.TypedQuery;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -28,75 +23,95 @@ import lombok.Setter;
 public class Flight extends AbstractEntity {
 
 	// Serialisation identifier
-	private static final long							serialVersionUID	= 1L;
-
-	@PersistenceContext
-	private transient javax.persistence.EntityManager	entityManager;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
 	@Mandatory
 	@ValidShortText
 	@Automapped
-	private String										tag;
+	private String				tag;
 
 	@Mandatory
 	@Valid
 	@Automapped
-	private Boolean										selfTransfer;
+	private Boolean				selfTransfer;
 
 	@Mandatory
 	@ValidMoney
 	@Automapped
-	private Money										cost;
+	private Money				cost;
 
 	@Optional
 	@ValidLongText
 	@Automapped
-	private String										description;
-
+	private String				description;
 
 	// Derived attributes
-	@Transient
-	public Date getScheduledDeparture() {
-		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MIN(l.scheduledDeparture) FROM Leg l WHERE l.flight = :flight", Date.class);
-		query.setParameter("flight", this);
-		return query.getSingleResult();
-	}
+	//	@Transient
+	//	public Date getScheduledDeparture() {
+	//		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MIN(l.scheduledDeparture) FROM Leg l WHERE l.flight = :flight", Date.class);
+	//		query.setParameter("flight", this);
+	//		return query.getSingleResult();
+	//	}
+	//
+	//	@Transient
+	//	public Date getScheduledArrival() {
+	//		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MAX(l.scheduledArrival) FROM Leg l WHERE l.flight = :flight", Date.class);
+	//		query.setParameter("flight", this);
+	//		return query.getSingleResult();
+	//	}
+	//
+	//	@Transient
+	//	public String getOriginCity() {
+	//		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.departureAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledDeparture ASC", String.class);
+	//		query.setParameter("flight", this);
+	//		return query.setMaxResults(1).getSingleResult();
+	//	}
+	//
+	//	@Transient
+	//	public String getDestinationCity() {
+	//		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.arrivalAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledArrival DESC", String.class);
+	//		query.setParameter("flight", this);
+	//		return query.setMaxResults(1).getSingleResult();
+	//	}
+	//
+	//	@Transient
+	//	public int getNumberOfLayovers() {
+	//		TypedQuery<Long> query = this.entityManager.createQuery("SELECT COUNT(l) FROM Leg l WHERE l.flight = :flight", Long.class);
+	//		query.setParameter("flight", this);
+	//		Long count = query.getSingleResult();
+	//		return count != null ? Math.max(count.intValue() - 1, 0) : 0;
+	//	}
 
-	@Transient
-	public Date getScheduledArrival() {
-		TypedQuery<Date> query = this.entityManager.createQuery("SELECT MAX(l.scheduledArrival) FROM Leg l WHERE l.flight = :flight", Date.class);
-		query.setParameter("flight", this);
-		return query.getSingleResult();
-	}
-
-	@Transient
-	public String getOriginCity() {
-		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.departureAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledDeparture ASC", String.class);
-		query.setParameter("flight", this);
-		return query.setMaxResults(1).getSingleResult();
-	}
-
-	@Transient
-	public String getDestinationCity() {
-		TypedQuery<String> query = this.entityManager.createQuery("SELECT l.arrivalAirport FROM Leg l WHERE l.flight = :flight ORDER BY l.scheduledArrival DESC", String.class);
-		query.setParameter("flight", this);
-		return query.setMaxResults(1).getSingleResult();
-	}
-
-	@Transient
-	public int getNumberOfLayovers() {
-		TypedQuery<Long> query = this.entityManager.createQuery("SELECT COUNT(l) FROM Leg l WHERE l.flight = :flight", Long.class);
-		query.setParameter("flight", this);
-		Long count = query.getSingleResult();
-		return count != null ? Math.max(count.intValue() - 1, 0) : 0;
-	}
-
+	//	@Transient
+	//	public Date getScheduledDeparture(final FlightService flightService) {
+	//		return flightService.getScheduledDeparture(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public Date getScheduledArrival(final FlightService flightService) {
+	//		return flightService.getScheduledArrival(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public String getOriginCity(final FlightService flightService) {
+	//		return flightService.getOriginCity(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public String getDestinationCity(final FlightService flightService) {
+	//		return flightService.getDestinationCity(this.getId());
+	//	}
+	//
+	//	@Transient
+	//	public int getNumberOfLayovers(final FlightService flightService) {
+	//		return flightService.getNumberOfLayovers(this.getId());
+	//	}
 
 	// Relationships
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Manager manager;
+	private Manager				manager;
 
 }
