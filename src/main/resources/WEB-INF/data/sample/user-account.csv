@@ -7,7 +7,7 @@ user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза 
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
 user-account-agent-01,true,"UserIdentity{name: 'Pablo', surname: 'Bermudez', email: 'pabberima@acme.com'}",agent1,agent1
 user-account-agent-02,true,"UserIdentity{name: 'Perico', surname: 'ଜିପ୍ସୀ |', email: 'perico@gmail.com'}",agent2,agent2
-user-account-agent-03,true,"UserIdentity{name: 'Manager', surname: 'cerotres', email: 'manager3@acme.com'}",manager3,manager3
+user-account-agent-03,true,"UserIdentity{name: 'Manager', surname: 'cerotres', email: 'manager3@acme.com'}",agent3,agent3
 user-account-manager-01,true,"UserIdentity{name: 'Alejandro', surname: 'Manager', email: 'alejandro@acme.com'}",manager1,manager1
 user-account-manager-02,true,"UserIdentity{name: 'โลเร็ม อิปซัม', surname: 'Thai', email: 'โลเร็ม อิปซัม@acme.com'}",manager2,manager2
 user-account-manager-03,true,"UserIdentity{name: '洛伦·伊普森', surname: 'Chinese', email: '洛伦·伊普森@acme.com'}",manager3,manager3
