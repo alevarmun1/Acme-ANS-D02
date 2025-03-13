@@ -26,7 +26,7 @@ public class Technicians extends AbstractRole {
 	// Attributes
 
 	@Mandatory
-	@ValidString(pattern = "^[A-Z]{2-3}\\d{6}$", message = "{validation.technicians.licenseNumber}")
+	@ValidString(pattern = "^[A-Z]{2,3}\\d{6}$", message = "{validation.technicians.licenseNumber}")
 	@Column(unique = true)
 	private String				licenseNumber;
 

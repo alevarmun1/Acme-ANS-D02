@@ -1,6 +1,8 @@
 
 package acme.constraints;
 
+import java.util.Objects;
+
 import javax.validation.ConstraintValidatorContext;
 
 import acme.client.components.validation.AbstractValidator;
@@ -30,8 +32,9 @@ public class ServiceValidator extends AbstractValidator<ValidService, Service> {
 		else {
 			String promotionCode = service.getPromotionCode();
 			String lastTwoDigits = promotionCode.substring(5);
-			String currentYear = String.valueOf(MomentHelper.getCurrentMoment()).substring(2);
-			boolean promotionCodeHasCurrentYear = lastTwoDigits == currentYear;
+			String currentYear = String.valueOf(MomentHelper.getCurrentMoment());
+			currentYear = currentYear.substring(currentYear.length() - 2);
+			boolean promotionCodeHasCurrentYear = Objects.equals(lastTwoDigits, currentYear);
 
 			super.state(context, promotionCodeHasCurrentYear, "promotionCode", "validation.service.promotionCode");
 		}
