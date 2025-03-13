@@ -15,7 +15,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidScore;
-import acme.client.components.validation.ValidString;
+import acme.constraints.ValidLongText;
 import acme.constraints.ValidShortText;
 import acme.constraints.ValidTrackingLog;
 import lombok.Getter;
@@ -49,7 +49,7 @@ public class TrackingLog extends AbstractEntity {
 	private TrackingLogStatus	status;
 
 	@Optional
-	@ValidString(min = 0, max = 255)
+	@ValidLongText
 	@Automapped
 	private String				resolution;
 
