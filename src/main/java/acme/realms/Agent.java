@@ -54,7 +54,7 @@ public class Agent extends AbstractRole {
 	private String				bio;
 
 	@Optional
-	@ValidMoney
+	@ValidMoney(min = 0.00, max = 1000000.00)
 	@Automapped
 	private Money				salary;
 
